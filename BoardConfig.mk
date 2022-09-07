@@ -27,13 +27,16 @@ TARGET_OTA_ASSERT_DEVICE := j6lte,j6ltecis,j6ltexx,j6lteub,j6lteins,j6ltedtvvj,j
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 # Kernel
 TARGET_KERNEL_CONFIG := exynos7870-j6lte_defconfig
 
 # Device Manifest
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifest.xml
+# DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+#      vendor/lineage/config/device_framework_matrix.xml
+
+BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_j6lte
