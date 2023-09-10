@@ -278,6 +278,7 @@
         </interface>
     </hal>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <hal format="hidl">
         <name>vendor.lineage.livedisplay</name>
         <transport>hwbinder</transport>
@@ -319,14 +320,36 @@
         <name>android.hardware.gnss</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
+=======
+    <hal format="hidl">
+        <name>android.hardware.gnss</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+>>>>>>> cf7e40d (a3y17lte: upgrade gnss to 2.0)
         <interface>
             <name>IGnss</name>
             <instance>default</instance>
         </interface>
+<<<<<<< HEAD
         <fqname>@1.1::IGnss/default</fqname>
     </hal>
 =======
 >>>>>>> 2995fc1 (a3y17lte: manifest drop custome powerhal)
 =======
 >>>>>>> a66e33b (a3y17lte: manifes move livedispaly to vintf fragment)
+=======
+        <fqname>@1.0::IGnss/default</fqname>
+        <fqname>@1.1::IGnss/default</fqname>
+        <fqname>@2.0::IGnss/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.samsung.hardware.gnss</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>ISehGnss</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+>>>>>>> cf7e40d (a3y17lte: upgrade gnss to 2.0)
 </manifest>
