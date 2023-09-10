@@ -277,6 +277,7 @@
             <instance>default</instance>
         </interface>
     </hal>
+<<<<<<< HEAD
     <hal format="hidl">
         <name>vendor.lineage.livedisplay</name>
         <transport>hwbinder</transport>
@@ -326,4 +327,6 @@
     </hal>
 =======
 >>>>>>> 2995fc1 (a3y17lte: manifest drop custome powerhal)
+=======
+>>>>>>> a66e33b (a3y17lte: manifes move livedispaly to vintf fragment)
 </manifest>
