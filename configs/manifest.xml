@@ -18,6 +18,7 @@
         </interface>
     </hal>
     <hal format="hidl">
+<<<<<<< HEAD
         <name>android.hardware.biometrics.fingerprint</name>
         <transport>hwbinder</transport>
         <version>2.1</version>
@@ -27,6 +28,8 @@
         </interface>
     </hal>
     <hal format="hidl">
+=======
+>>>>>>> c63186c (j6lte: manifest: drop broken soundtrigger hal)
         <name>android.hardware.bluetooth</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
