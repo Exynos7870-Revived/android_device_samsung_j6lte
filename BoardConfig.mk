@@ -15,12 +15,25 @@
 
 DEVICE_PATH := device/samsung/j6lte
 
-## Audio
-# TFA-Audio
-BOARD_USES_EXYNOS7870_TFA_AMP := true
+# Audio
 
-# exynos7870 OSS audio hal
-TARGET_AUDIOHAL_VARIANT := samsung-exynos7870
+# audio type guard
+TARGET_BOARD_HAS_M10LTE_AUDIO_HAL := true
+TARGET_BOARD_HAS_A6LTE_AUDIO_HAL := false
+TARGET_BOARD_HAS_OSS_AUDIO_HAL := false
+TARGET_BOARD_HAS_OSS_AUDIO_HAL_WITH_TFA_AMP := true
+
+ifeq ($(TARGET_BOARD_HAS_M10LTE_AUDIO_HAL),true)
+TARGET_BOARD_HAS_TFA_AMP := true
+endif
+
+ifeq ($(TARGET_BOARD_HAS_OSS_AUDIO_HAL_WITH_TFA_AMP),true)
+TARGET_BOARD_HAS_TFA_AMP := true
+BOARD_USES_EXYNOS7870_TFA_AMP := true
+endif
+
+# Display
+TARGET_SCREEN_DENSITY := 320
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := j6lte,j6ltecis,j6ltexx,j6lteub,j6lteins,j6ltedtvvj,j6ltekx,j6ltedx

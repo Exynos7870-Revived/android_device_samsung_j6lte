@@ -120,6 +120,14 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(DEVICE_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
+ifeq ($(TARGET_DEVICE_HAS_M10LTE_AUDIO_HAL),true)
+# Custom mixer_paths prebuilt
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/audio/prebuilt/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
+    $(DEVICE_PATH)/configs/audio/prebuilt/mixer_gains.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_gains.xml
+endif
+
+ifeq ($(TARGET_DEVICE_HAS_OSS_AUDIO_HAL),true)
 # Custom mixer_paths OSS
 PRODUCT_COPY_FILES += \
 $(LOCAL_PATH)/configs/audio/oss/mixer_paths_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_0.xml
@@ -134,6 +142,7 @@ $(call inherit-product, device/samsung/universal7870-common/device-oss_audio.mk)
 
 # Inherit from common
 # $(call inherit-product, device/samsung/universal7870-common/device-prebuilt_audio.mk)
+
 # Properties
 -include $(DEVICE_PATH)/system_prop.mk
 
