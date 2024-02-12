@@ -321,14 +321,8 @@
             <name>IGnss</name>
             <instance>default</instance>
         </interface>
-<<<<<<< HEAD
         <fqname>@1.1::IGnss/default</fqname>
     </hal>
-=======
->>>>>>> 2995fc1 (a3y17lte: manifest drop custome powerhal)
-=======
->>>>>>> a66e33b (a3y17lte: manifes move livedispaly to vintf fragment)
-=======
         <fqname>@1.0::IGnss/default</fqname>
         <fqname>@1.1::IGnss/default</fqname>
         <fqname>@2.0::IGnss/default</fqname>
@@ -342,5 +336,13 @@
             <instance>default</instance>
         </interface>
     </hal>
->>>>>>> cf7e40d (a3y17lte: upgrade gnss to 2.0)
+    <hal format="hidl">
+        <name>android.hardware.thermal</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IThermal</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </manifest>
