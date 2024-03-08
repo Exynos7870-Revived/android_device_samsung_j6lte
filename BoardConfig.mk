@@ -15,8 +15,12 @@
 
 DEVICE_PATH := device/samsung/j6lte
 
-# Audio
-BOARD_USE_TFA_AMP := true
+## Audio
+# TFA-Audio
+BOARD_USES_EXYNOS7870_TFA_AMP := true
+
+# exynos7870 OSS audio hal
+TARGET_AUDIOHAL_VARIANT := samsung-exynos7870
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := j6lte,j6ltecis,j6ltexx,j6lteub,j6lteins,j6ltedtvvj,j6ltekx,j6ltedx
@@ -56,6 +60,7 @@ WIFI_DRIVER_NVRAM_PATH           := "/vendor/etc/wifi/nvram_net.txt"
 WIFI_DRIVER_FW_PATH_STA          := "/vendor/etc/wifi/bcmdhd_sta.bin"
 WIFI_DRIVER_FW_PATH_AP           := "/vendor/etc/wifi/bcmdhd_apsta.bin"
 WIFI_BAND                        := 802_11_ABG
+WIFI_AVOID_IFACE_RESET_MAC_CHANGE := true
 
 # inherit from common
 -include device/samsung/universal7870-common/BoardConfigCommon.mk
