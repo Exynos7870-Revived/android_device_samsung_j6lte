@@ -2,6 +2,21 @@ The Samsung J6 2018 (codenamed _"j6lte"_) are a mid-range smartphone from Samsun
 
 It was announced and released in May 2018.
 
+## Device Tree Status
+
+| Feature      | Status     |
+| -----------: |----------- |
+| Stability    | Semi-Stable |
+| Boot         | Working    |
+| Sounds       | Calls Sounds Dead on Dual-Sim Models. |
+| Bluetooth    | Working    |
+| Wi-Fi        | Working    |
+| Hotspot      | Working    |
+| Camera       | Front Camera Stretch on 3rd party apps like whatsapp, instagram etc. | 
+| RIL          | Working    |
+| Fingerprint  | Working    |
+| Lockscreen   | Working    | 
+
 ## Device specifications
 
 | Device       | Samsung Galaxy J6 2018                            |

@@ -67,7 +67,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libbauthtzcommon_shim
 
-# Wifi
+# Wi-Fi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
